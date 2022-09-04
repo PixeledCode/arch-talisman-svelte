@@ -8,7 +8,7 @@
 </script>
 
 <svelte:head>
-	<title>Home</title>
+	<title>ArchTalisman</title>
 	<meta name="description" content="ArchTalisman home page" />
 </svelte:head>
 

@@ -77,7 +77,7 @@
 		display: grid;
 		grid-template-columns: 1fr 2fr 1fr;
 		gap: 3px;
-		padding-inline: 48px;
+		/* padding-inline: 48px; */
 		margin-top: 64px;
 
 		img {

@@ -20,36 +20,38 @@
 		align-items: center;
 		margin-top: 72px;
 
+		h1 {
+			text-transform: uppercase;
+			font-size: 4rem;
+			color: rgb(164, 164, 164);
+			line-height: 1;
+
+			span {
+				color: rgb(255, 0, 0);
+			}
+		}
+
 		& > span {
-			font-size: 1.6rem;
+			font-size: 1.64rem;
 			font-weight: 300;
+		}
 
-			@media (max-width: 500px) {
-				font-size: 1.15rem;
+		@media (max-width: 540px) {
+			h1 {
+				font-size: 3rem;
 			}
-
-			@media (max-width: 360px) {
-				font-size: 0.8rem;
+			& > span {
+				font-size: 1.23rem;
 			}
 		}
-	}
 
-	h1 {
-		text-transform: uppercase;
-		font-size: 4rem;
-		color: rgb(164, 164, 164);
-		line-height: 1;
-
-		span {
-			color: rgb(255, 0, 0);
-		}
-
-		@media (max-width: 500px) {
-			font-size: 3rem;
-		}
-
-		@media (max-width: 360px) {
-			font-size: 2rem;
+		@media (max-width: 420px) {
+			h1 {
+				font-size: 2.3rem;
+			}
+			& > span {
+				font-size: 0.95rem;
+			}
 		}
 	}
 </style>

@@ -70,8 +70,8 @@
 		width: 100%;
 
 		&__title {
-			font-weight: 300;
-			font-size: 1.3rem;
+			font-size: 1rem;
+			line-height: 1.3;
 		}
 		&__members {
 			display: flex;
@@ -83,10 +83,14 @@
 				display: flex;
 				flex-direction: column;
 				font-weight: 300;
+
+				line-height: 1.3;
 			}
 
 			.name {
 				font-weight: 500;
+				font-size: 1.15rem;
+				display: block;
 			}
 		}
 
@@ -96,8 +100,9 @@
 			display: flex;
 			flex-direction: column;
 			gap: 2px;
+			line-height: 1.3;
 			span {
-				font-weight: 500;
+				font-weight: 400;
 				min-width: 65px;
 			}
 
