@@ -50,7 +50,7 @@
 				font-size: 2.3rem;
 			}
 			& > span {
-				font-size: 0.95rem;
+				font-size: 0.9rem;
 			}
 		}
 	}

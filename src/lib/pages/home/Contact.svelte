@@ -65,13 +65,16 @@
 		margin-block: 64px;
 		display: flex;
 		justify-content: space-between;
-		gap: 24px;
+		gap: 32px;
 		flex-wrap: wrap;
 		width: 100%;
 
 		&__title {
 			font-size: 1rem;
 			line-height: 1.3;
+			border-bottom: 2px solid rgb(164, 164, 164);
+			width: 120%;
+			padding-right: 24px;
 		}
 		&__members {
 			display: flex;
@@ -104,6 +107,7 @@
 			span {
 				font-weight: 400;
 				min-width: 65px;
+				font-weight: 500;
 			}
 
 			a {

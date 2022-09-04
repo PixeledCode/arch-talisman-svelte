@@ -19,65 +19,65 @@
 <section class="container projects">
 	<h2 class="sr-only">Projects</h2>
 	{#if data && Object.values(data).length}
-		<div class="large-1">
-			<img
-				src={imageSrc('large-1', 290, 500)}
-				width={290}
-				height={500}
-				alt={data['large-1'].main_image.alt}
-			/>
-		</div>
-		<ul>
-			<li class="small-1">
+		<div class="projects__left">
+			<div class="large-1">
+				<img
+					src={imageSrc('large-1', 290, 500)}
+					width={290}
+					height={500}
+					alt={data['large-1'].main_image.alt}
+				/>
+			</div>
+			<div class="small-1">
 				<img
 					width={290}
 					height={242}
 					src={imageSrc('small-1', 290, 242)}
 					alt={data['small-1'].main_image.alt}
 				/>
-			</li>
-			<li class="small-2">
-				<img
-					width={290}
-					height={242}
-					src={imageSrc('small-2', 290, 242)}
-					alt={data['small-2'].main_image.alt}
-				/>
-			</li>
-			<li class="small-3">
+			</div>
+			<div class="small-3">
 				<img
 					width={290}
 					height={242}
 					src={imageSrc('small-3', 290, 242)}
 					alt={data['small-3'].main_image.alt}
 				/>
-			</li>
-			<li class="small-4">
+			</div>
+		</div>
+		<div class="projects__right">
+			<div class="small-2">
+				<img
+					width={290}
+					height={242}
+					src={imageSrc('small-2', 290, 242)}
+					alt={data['small-2'].main_image.alt}
+				/>
+			</div>
+			<div class="small-4">
 				<img
 					width={290}
 					height={242}
 					src={imageSrc('small-4', 290, 242)}
 					alt={data['small-4'].main_image.alt}
 				/>
-			</li>
-		</ul>
-		<div class="large-2">
-			<img
-				width={290}
-				height={500}
-				src={imageSrc('large-2', 290, 500)}
-				alt={data['large-2'].main_image.alt}
-			/>
+			</div>
+			<div class="large-2">
+				<img
+					src={imageSrc('large-2', 290, 500)}
+					width={290}
+					height={500}
+					alt={data['large-2'].main_image.alt}
+				/>
+			</div>
 		</div>
 	{/if}
 </section>
 
 <style lang="scss">
 	.projects {
-		display: grid;
-		grid-template-columns: 1fr 2fr 1fr;
+		display: flex;
 		gap: 3px;
-		/* padding-inline: 48px; */
 		margin-top: 64px;
 
 		img {
@@ -88,14 +88,24 @@
 			box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 		}
 
-		ul {
-			display: flex;
-			flex-wrap: wrap;
-			gap: 3px;
-
+		> div {
 			display: grid;
 			grid-template-columns: 1fr 1fr;
+			grid-template-rows: 1fr 1fr;
 			gap: 3px;
+		}
+
+		.large-1,
+		.large-2 {
+			grid-row: 1/3;
+		}
+
+		.large-2 {
+			grid-column: 2/3;
+		}
+
+		@media (max-width: 540px) {
+			flex-wrap: wrap;
 		}
 	}
 </style>
