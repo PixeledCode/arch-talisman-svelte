@@ -1,5 +1,8 @@
 <script lang="ts">
 	export let data: any;
+
+	let phoneArr = data.address.phone.split(',');
+	let addressArr = data.address.address.split(',');
 </script>
 
 <section class="container">
@@ -7,37 +10,50 @@
 
 	{#if data}
 		<div class="contact">
-			<div class="contact__members">
-				{#each data.members as member}
-					<div>
-						<span class="name">
-							{member.name}
-						</span>
-						<span>
-							{member.info}
-						</span>
-						<span>
-							{member.position}
-						</span>
-						<span>
-							{member.status}
-						</span>
-					</div>
-				{/each}
+			<div>
+				<span class="contact__title">Leadership</span>
+				<div class="contact__members">
+					{#each data.members as member}
+						<div>
+							<span class="name">
+								{member.name}
+							</span>
+							<span>
+								{member.info}
+							</span>
+							<span>
+								{member.position}
+							</span>
+							<span>
+								{member.status}
+							</span>
+						</div>
+					{/each}
+				</div>
 			</div>
-			<address class="contact__address">
-				<span>Contact</span>
-				<div>
-					<span>email:</span>
-					{data.address.email}
-				</div>
-				<div>
-					<span>phone:</span>
-					{data.address.phone}
-				</div>
-				<div>
-					<span>address:</span>
-					{data.address.address}
+			<address>
+				<span class="contact__title">Contact</span>
+				<div class="contact__address">
+					<div>
+						<span>email:</span>
+						<a href={`mailto:${data.address.email}`}> {data.address.email}</a>
+					</div>
+					<div class="contact__phone">
+						<span>phone:</span>
+						<div>
+							{#each phoneArr as phone}
+								<a href={`tel:${phone}`}>{phone}</a><br />
+							{/each}
+						</div>
+					</div>
+					<div class="contact__address">
+						<span>address:</span>
+						<div>
+							{#each addressArr as address}
+								{address}<br />
+							{/each}
+						</div>
+					</div>
 				</div>
 			</address>
 		</div>
@@ -53,10 +69,15 @@
 		flex-wrap: wrap;
 		width: 100%;
 
+		&__title {
+			font-weight: 300;
+			font-size: 1.3rem;
+		}
 		&__members {
 			display: flex;
 			flex-direction: column;
-			gap: 16px;
+			gap: 8px;
+			margin-top: 8px;
 
 			> div {
 				display: flex;
@@ -68,19 +89,30 @@
 				font-weight: 500;
 			}
 		}
-	}
 
-	address {
-		> span {
-			font-weight: 500;
-			font-size: 1.5rem;
-		}
-
-		> div {
+		&__address {
+			margin-top: 8px;
 			font-weight: 300;
-
+			display: flex;
+			flex-direction: column;
+			gap: 2px;
 			span {
 				font-weight: 500;
+				min-width: 65px;
+			}
+
+			a {
+				text-decoration-color: transparent;
+				color: rgb(255, 0, 0);
+
+				&:hover {
+					text-decoration-color: currentColor;
+				}
+			}
+			> div {
+				display: flex;
+				flex-direction: row;
+				gap: 4px;
 			}
 		}
 	}

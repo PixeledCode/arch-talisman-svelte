@@ -1,8 +1,15 @@
+<script>
+	export /**
+	 * @type {string}
+	 */
+	let data;
+</script>
+
 <header class="container">
 	<h1>
 		<span>Arch</span>Talisman
 	</h1>
-	<span>India's Leading Design Office</span>
+	<span>{data}</span>
 </header>
 
 <style lang="scss">
@@ -14,27 +21,34 @@
 		margin-top: 72px;
 
 		& > span {
-			text-transform: uppercase;
-			font-size: 1.5rem;
+			font-size: 1.6rem;
 			font-weight: 300;
 
 			@media (max-width: 500px) {
-				font-size: 1rem;
+				font-size: 1.15rem;
+			}
+
+			@media (max-width: 360px) {
+				font-size: 0.8rem;
 			}
 		}
 	}
 
 	h1 {
 		text-transform: uppercase;
-		font-size: 3rem;
-		color: rgb(95, 85, 85);
+		font-size: 4rem;
+		color: rgb(164, 164, 164);
 		line-height: 1;
 
 		span {
-			color: rgb(141, 3, 3);
+			color: rgb(255, 0, 0);
 		}
 
 		@media (max-width: 500px) {
+			font-size: 3rem;
+		}
+
+		@media (max-width: 360px) {
 			font-size: 2rem;
 		}
 	}

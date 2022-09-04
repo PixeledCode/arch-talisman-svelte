@@ -76,26 +76,26 @@
 	.projects {
 		display: grid;
 		grid-template-columns: 1fr 2fr 1fr;
-		gap: 16px;
-
+		gap: 3px;
+		padding-inline: 48px;
 		margin-top: 64px;
 
 		img {
 			object-fit: cover;
 			width: 100%;
 			height: 100%;
-			border-radius: 4px;
-			box-shadow: rgba(0, 0, 0, 0.3) 0px 4px 12px;
+			border-radius: 2px;
+			box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 		}
 
 		ul {
 			display: flex;
 			flex-wrap: wrap;
-			gap: 16px;
+			gap: 3px;
 
 			display: grid;
 			grid-template-columns: 1fr 1fr;
-			gap: 16px;
+			gap: 3px;
 		}
 	}
 </style>
