@@ -12,6 +12,6 @@
 
 <style>
 	svg {
-		fill: #ffab00;
+		fill: white;
 	}
 </style>

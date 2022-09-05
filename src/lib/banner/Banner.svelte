@@ -1,11 +1,13 @@
 <script>
-	import Alert from '$lib/icons/Alert.svelte';
+	export /**
+	 * @type {string}
+	 */
+	let data;
 </script>
 
 <div class="banner" aria-hidden="false" role="alert">
 	<div>
-		<Alert />
-		<span> Website Under Maintenance </span>
+		<span>{data}</span>
 	</div>
 </div>
 
@@ -16,7 +18,7 @@
 		justify-content: center;
 		font-weight: 500;
 
-		background-color: #ffab00;
+		/* background-color: #ffab00; */
 
 		> div {
 			display: flex;

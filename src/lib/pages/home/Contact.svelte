@@ -35,11 +35,9 @@
 				<span class="contact__title">Contact</span>
 				<div class="contact__address">
 					<div>
-						<span>email:</span>
 						<a href={`mailto:${data.address.email}`}> {data.address.email}</a>
 					</div>
 					<div class="contact__phone">
-						<span>phone:</span>
 						<div>
 							{#each phoneArr as phone}
 								<a href={`tel:${phone}`}>{phone}</a><br />
@@ -47,7 +45,6 @@
 						</div>
 					</div>
 					<div class="contact__address">
-						<span>address:</span>
 						<div>
 							{#each addressArr as address}
 								{address}<br />
@@ -68,13 +65,10 @@
 		gap: 32px;
 		flex-wrap: wrap;
 		width: 100%;
+		font-size: 0.875rem;
 
 		&__title {
-			font-size: 1rem;
 			line-height: 1.3;
-			border-bottom: 2px solid rgb(164, 164, 164);
-			width: 120%;
-			padding-right: 24px;
 		}
 		&__members {
 			display: flex;
@@ -102,13 +96,8 @@
 			font-weight: 300;
 			display: flex;
 			flex-direction: column;
-			gap: 2px;
+			gap: 6px;
 			line-height: 1.3;
-			span {
-				font-weight: 400;
-				min-width: 65px;
-				font-weight: 500;
-			}
 
 			a {
 				text-decoration-color: transparent;
@@ -117,11 +106,6 @@
 				&:hover {
 					text-decoration-color: currentColor;
 				}
-			}
-			> div {
-				display: flex;
-				flex-direction: row;
-				gap: 4px;
 			}
 		}
 	}
