@@ -7,6 +7,7 @@
 
 <div class="banner" aria-hidden="false" role="alert">
 	<div>
+		<img src="/construction.png" width={32} alt="" />
 		<span>{data}</span>
 	</div>
 </div>
